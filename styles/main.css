@@ -1,0 +1,62 @@
+/* the reusable css*/
+/*removed default css of elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nested styling*/
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #03be80;
+  padding: 30px;
+  /*map-get to iterate through colors and get the color white*/
+  /*media queries for the tablet and mobile devices*/
+}
+.hero h1,
+.hero p {
+  color: #ffffff;
+}
+.hero h1 {
+  text-transform: uppercase;
+}
+.hero p {
+  font-size: 32px;
+}
+.hero .left, .hero .right {
+  width: 50%;
+}
+.hero .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .right button {
+  font-size: 18px;
+  color: #03be80;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 40px;
+  width: 200px;
+  height: 45px;
+}
+@media screen and (max-width: 480px) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=main.css.map */

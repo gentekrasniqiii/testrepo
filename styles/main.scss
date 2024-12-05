@@ -1,0 +1,81 @@
+@import "variables.scss";
+
+/* the reusable css*/
+@mixin flex-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-default {
+  font-size: map-get($fonts, "sm");
+  color: $base-background-color;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@mixin flex-responsiveness {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@mixin full-view {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*removed default css of elements*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* nested styling*/
+.hero {
+  @include full-view;
+  @include flex-component;
+  background-color: $base-background-color;
+  padding: 30px;
+
+  /*map-get to iterate through colors and get the color white*/
+  h1,
+  p {
+    color: $base-text-color;
+  }
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: map-get($fonts, "lg");
+  }
+
+  .left, .right {
+    width: 50%;
+  }
+
+  .left {
+    @include flex-component;
+  }
+
+  .right button {
+    @include button-default;
+    margin-top: 40px;
+    width: 200px;
+    height: 45px;
+  }
+  /*media queries for the tablet and mobile devices*/
+  @media screen and (max-width: $breakpoint-mobile) {
+    @include flex-responsiveness;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    @include flex-responsiveness;
+  }
+
+}
