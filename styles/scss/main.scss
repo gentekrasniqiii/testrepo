@@ -73,7 +73,7 @@ body {
   @include main-holder;
   @media screen and (max-width: $breakpoint-tablet) {
     width: 100%;
-    padding: 30px;
+    padding: $default-padding;
     .right {
       align-items: center;
       margin-top: 20px;
@@ -87,7 +87,7 @@ body {
 
 .hero {
   @include flex-component;
-  padding: 30px;
+  padding: $default-padding;
   border-radius: 15px;
 
   h1 {
@@ -128,6 +128,7 @@ body {
 
   @media screen and (max-width: $breakpoint-tablet) {
     @include flex-responsiveness;
+    
     width: 100%;
 
     .left {
@@ -156,14 +157,12 @@ body {
   }
 }
 
-/*In the end I added a small decoration with position absolute*/
+/*Added a small decoration using css positioning*/
 .decoration {
   position: absolute;
   top: 5%;
   right: 0%;
-  background-image: url('/assets/images/decoration.svg');
-  z-index: -1;
+  background-image: url("/assets/images/decoration.svg");
   width: 40px;
   height: 40px;
-  background-repeat: no-repeat;
 }
