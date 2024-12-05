@@ -1,0 +1,169 @@
+@import "variables.scss";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat-Regular.ttf") format("ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin main-holder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-component {
+  display: flex;
+  align-items: center;
+}
+
+@mixin button-default {
+  font-size: map-get($fonts, "sm");
+  color: $second-text-color;
+  padding: 10px 15px;
+  height: 60px;
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid $second-text-color;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@mixin flex-responsiveness {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@mixin img-default-holder {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin content-box($padding) {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: $padding;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+}
+
+.services {
+  margin-bottom: 80px;
+}
+
+.banner,
+.services,
+.contact {
+  @include main-holder;
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    padding: 30px;
+    .right {
+      align-items: center;
+      margin-top: 20px;
+    }
+  }
+}
+
+.bg {
+  background-color: $gray-text-color;
+}
+
+.hero {
+  @include flex-component;
+  padding: 30px;
+  border-radius: 15px;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: map-get($fonts, "lg");
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: map-get($fonts, "sm");
+    margin-bottom: 20px;
+  }
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .left {
+    @include flex-component;
+  }
+
+  .right button {
+    @include button-default;
+    margin-top: 40px;
+  }
+
+  .right button:hover {
+    transform: scale(1.02);
+  }
+
+  .img-holder,
+  img {
+    @include img-default-holder;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    @include flex-responsiveness;
+    width: 100%;
+
+    .left {
+      @include flex-component;
+    }
+    .left,
+    .right {
+      @include content-box(0px);
+      width: 100%;
+    }
+    .right button {
+      width: 200px;
+    }
+    .content {
+      @include content-box(0px 60px 0px 0px);
+    }
+    p {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    .right button {
+      width: 100%;
+    }
+  }
+}
+
+/*In the end I added a small decoration with position absolute*/
+.decoration {
+  position: absolute;
+  top: 5%;
+  right: 0%;
+  background-image: url('/assets/images/decoration.svg');
+  z-index: -1;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+}
