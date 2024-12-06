@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "Montserrat";
-  src: url("../assets/fonts/Montserrat-Regular.ttf") format("ttf");
-}
 * {
   margin: 0;
   padding: 0;
@@ -132,14 +128,12 @@ body {
   }
 }
 
-/*In the end I added a small decoration with position absolute*/
+/*Added a small decoration using css positioning*/
 .decoration {
   position: absolute;
   top: 5%;
   right: 0%;
   background-image: url("/assets/images/decoration.svg");
-  z-index: -1;
   width: 40px;
   height: 40px;
-  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
