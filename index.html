@@ -4,19 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/scss/main.css" />
-    <link href="./styles/tailwind/output.css" rel="stylesheet" />
-    <title>SCSS & Tailwind Styling</title>
+
+    <link rel="stylesheet" href="./styles/bootstrap/custom.css" />
+    <!--The default font family for both of web pages is on styles.css-->
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <title>Website</title>
   </head>
 
+
   <body>
-    <!--Banner Component-->
+    <!--Banner Component SCSS-->
     <section class="banner">
       <div class="decoration"></div>
       <main class="hero">
         <div class="left">
           <h1>Lorem, ipsum.</h1>
         </div>
-
         <div class="right">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
@@ -28,8 +32,7 @@
       </main>
     </section>
 
-    <!--Services Component-->
-
+    <!--Services Component SCSS-->
     <section class="services">
       <div class="hero bg">
         <div class="left">
@@ -50,31 +53,27 @@
       </div>
     </section>
 
-    <section class="contact">
-      <!-- Contact with Tailwind CSS -->
-      <div class="flex flex-col w-full p-[30px] rounded-lg bg mb-8">
-        <h1 class="uppercase text-large font-bold mb-8">Lorem</h1>
-        <form>
-          <input
-            type="email"
-            name="email"
-            placeholder="Lorem"
-            class="w-full mb-8 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+    <!--New Services component with Bootstrap-->
+
+    <section class="services">
+      <!--Practiced grid system-->
+      <div class="row align-items-center p-4 bg-secondary rounded">
+        <div class="col-md-6">
+          <img
+            src="./assets/images/team-5-2.jpg"
+            alt="Placeholder Image"
+            class="img-fluid rounded mb-4"
           />
-
-          <textarea
-            rows="3"
-            placeholder="Lorem Impus"
-            class="w-full mb-8 p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-          ></textarea>
-
-          <button
-            type="submit"
-            class="w-full text-small text-primary py-3 px-6 bg-transparent border border-primary rounded-lg transform transition-transform hover:scale-[1.02]"
-          >
-            Send
-          </button>
-        </form>
+          <button class="btn btn-outline-success">Read More</button>
+        </div>
+        <div class="col-md-6 px-4">
+          <h2 class="fw-bold mb-4 text-uppercase">Bootstrap Grid</h2>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            sapiente error sequi suscipit soluta molestiae deserunt ea a quod
+            impedit.
+          </p>
+        </div>
       </div>
     </section>
   </body>
