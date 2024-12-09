@@ -1,6 +1,12 @@
 @import "../../abstracts/variables";
 @import "../../abstracts/mixin";
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
   max-width: 1199px;
   margin: auto;
@@ -81,13 +87,13 @@ nav {
     @include flex-component;
   }
 
-  .right button {
+  .left a, .right a {
     @include button-default;
+    text-decoration: none;
     margin-top: 40px;
-  }
-
-  .right button:hover {
-    transform: scale(1.02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .img-holder,

@@ -1,5 +1,5 @@
-@import "../../base/variables";
-@import "../../base/mixin";
+@import "../../abstracts/variables";
+@import "../../abstracts/mixin";
 
 .sign-up {
   @include flex-component;
@@ -35,6 +35,7 @@
   height: 100%;
   @include center-items;
 
+
   h1 {
     text-align: center;
   }
@@ -51,7 +52,7 @@
     padding-top: $default-padding;
     width: 80%;
     color: $dark-gray-color;
-    span {
+    a {
       color: $second-text-color;
       text-decoration: underline;
       cursor: pointer;
@@ -63,6 +64,9 @@
     height: 80%;
     h1 {
       padding-top: $default-padding;
+    }
+    form{
+      padding: 30px;
     }
   }
 }

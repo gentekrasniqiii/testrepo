@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 nav {
   max-width: 1199px;
   margin: auto;
@@ -102,7 +108,7 @@ nav li:last-child a:hover {
   display: flex;
   align-items: center;
 }
-.hero .right button {
+.hero .left a, .hero .right a {
   font-size: 24px;
   color: #03be80;
   padding: 10px 15px;
@@ -112,9 +118,13 @@ nav li:last-child a:hover {
   border: 1px solid #03be80;
   border-radius: 10px;
   cursor: pointer;
+  text-decoration: none;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hero .right button:hover {
+.hero .left a:hover, .hero .right a:hover {
   transform: scale(1.02);
 }
 .hero .img-holder,

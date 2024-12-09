@@ -60,7 +60,7 @@
   width: 80%;
   color: rgb(166, 166, 166);
 }
-.sign-form p span {
+.sign-form p a {
   color: #03be80;
   text-decoration: underline;
   cursor: pointer;
@@ -72,5 +72,8 @@
   }
   .sign-form h1 {
     padding-top: 30px;
+  }
+  .sign-form form {
+    padding: 30px;
   }
 }/*# sourceMappingURL=signup.css.map */
