@@ -1,0 +1,68 @@
+@import "../../base/variables";
+@import "../../base/mixin";
+
+.sign-up {
+  @include flex-component;
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+  }
+}
+
+.cover {
+  height: 100vh;
+  width: 50%;
+  img {
+    @include img-default-holder;
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    height: 20%;
+    img {
+      height: 160px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.sign-form {
+  width: 50%;
+  height: 100%;
+  @include center-items;
+
+  h1 {
+    text-align: center;
+  }
+  label {
+    color: $dark-gray-color;
+  }
+  .text-holder {
+    @include center-items;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  p {
+    padding-top: $default-padding;
+    width: 80%;
+    color: $dark-gray-color;
+    span {
+      color: $second-text-color;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    height: 80%;
+    h1 {
+      padding-top: $default-padding;
+    }
+  }
+}

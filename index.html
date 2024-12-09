@@ -3,27 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/scss/main.css" />
 
+    <!--In this page I practiced different styling including tailwind, Bootstrap & SASS-->
+
+    <!--SASS-->
+    <link rel="stylesheet" href="./styles/scss/pages/main/main.css" />
+    <!--Bootstrap customization-->
     <link rel="stylesheet" href="./styles/bootstrap/custom.css" />
-    <!--The default font family for both of web pages is on styles.css-->
+    <!--The default font family imported from this file-->
     <link rel="stylesheet" href="./styles/style.css" />
 
     <title>Website</title>
   </head>
+
   <!--Navbar SCSS -->
   <nav>
-    <div>
-      <a class="font-size" href="index.html">Home</a>
-      <a class="btn btn-success" href="signup.html">Sign Up</a>
-    </div>
+    <ul>
+      <li><a class="font-size" href="index.html">Home</a></li>
+      <li><a href="signup.html">Sign Up</a></li>
+    </ul>
   </nav>
 
   <body>
     <!--Banner Component SCSS-->
     <section class="banner">
       <div class="decoration"></div>
-      <main class="hero">
+      <div class="hero">
         <div class="left">
           <h1>Lorem, ipsum.</h1>
         </div>
@@ -35,7 +40,7 @@
           </p>
           <button>Follow us</button>
         </div>
-      </main>
+      </div>
     </section>
 
     <!--Services Component SCSS-->
@@ -59,10 +64,8 @@
       </div>
     </section>
 
-    <!--New Services component with Bootstrap-->
-
+    <!--Services component with Bootstrap-->
     <section class="services">
-      <!--Practiced grid system-->
       <div class="row align-items-center p-4 bg-secondary rounded">
         <div class="col-md-6">
           <img
@@ -73,7 +76,7 @@
           <button class="btn btn-outline-success">Read More</button>
         </div>
         <div class="col-md-6 px-4">
-          <h2 class="fw-bold mb-4 text-uppercase">Bootstrap Grid</h2>
+          <h2 class="fw-bold mb-4 text-uppercase">Lorem</h2>
           <p class="lead">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
             sapiente error sequi suscipit soluta molestiae deserunt ea a quod

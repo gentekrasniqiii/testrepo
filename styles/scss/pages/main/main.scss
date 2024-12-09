@@ -1,56 +1,24 @@
-@import "variables.scss";
+@import "../../abstracts/variables";
+@import "../../abstracts/mixin";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-@mixin main-holder {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1199px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-component {
-  display: flex;
-  align-items: center;
-}
-
-@mixin button-default {
-  font-size: map-get($fonts, "sm");
-  color: $second-text-color;
-  padding: 10px 15px;
-  height: 60px;
-  width: 200px;
-  background-color: transparent;
-  border: 1px solid $second-text-color;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-@mixin flex-responsiveness {
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-@mixin img-default-holder {
-  width: 100%;
-  height: 100%;
-}
-
-@mixin content-box($padding) {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: $padding;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
+nav {
+  max-width: 1199px;
+  margin: auto;
+  padding: 30px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  li:last-child a {
+    @include scnd-button;
+  }
 }
 
 .banner {
@@ -60,6 +28,10 @@ body {
 
 .services {
   margin-bottom: 80px;
+}
+
+.services div {
+  padding: $default-padding;
 }
 
 .banner,
@@ -74,6 +46,9 @@ body {
       margin-top: 20px;
     }
   }
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: 100%;
+  }
 }
 
 .bg {
@@ -82,7 +57,6 @@ body {
 
 .hero {
   @include flex-component;
-  padding: $default-padding;
   border-radius: 15px;
 
   h1 {
@@ -139,6 +113,7 @@ body {
     }
     .content {
       @include content-box(0px 60px 0px 0px);
+      padding: 0;
     }
     p {
       text-align: center;
@@ -160,19 +135,4 @@ body {
   background-image: url("/assets/images/decoration.svg");
   width: 40px;
   height: 40px;
-}
-
-nav {
-  height: 80px;
-  max-width: 1199px;
-  margin: auto;
-  padding: 20px 10px 20px 10px;
-  div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  a{
-    text-decoration: none;
-  }
 }

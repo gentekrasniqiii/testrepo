@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/scss/pages/signup/signup.css" />
+    <link rel="stylesheet" href="./styles/tailwind/output.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <section class="sign-up">
+      <div class="cover">
+        <img src="./assets/images/team-5-2.jpg" alt="Cover Image" />
+      </div>
+      <div class="sign-form">
+        <div>
+          <h1 class="uppercase text-large font-bold mb-8">Sign Up</h1>
+          <!--Form styled with Tailwind CSS-->
+          <form class="p-3">
+            <div>
+              <label>Name *</label>
+              <input
+                type="email"
+                name="email"
+                class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div>
+              <label>Email *</label>
+              <input
+                type="email"
+                name="email"
+                class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+
+            <div>
+              <label>Password *</label>
+              <input
+                type="email"
+                name="email"
+                class="w-full p-3 border mb-8 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="w-full py-3 px-6 bg-transparent text-primary border border-primary rounded-lg transform transition-transform hover:scale-[1.02]"
+            >
+              Join
+            </button>
+          </form>
+          <div class="text-holder">
+            <p>Already have an account? <span>Log In</span></p>
+            <p>
+              By signing up to create an account I accept Company's
+              <span> Terms of Use and Privacy Policy.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
