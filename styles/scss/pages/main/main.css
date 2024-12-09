@@ -167,7 +167,7 @@ nav li:last-child a:hover {
   position: absolute;
   top: 5%;
   right: 0%;
-  background-image: url("/assets/images/decoration.svg");
+  background-image: url("../../../../assets/images/decoration.svg");
   width: 40px;
   height: 40px;
 }/*# sourceMappingURL=main.css.map */
