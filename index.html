@@ -4,23 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--In this page I practiced different styling including tailwind, Bootstrap & SASS-->
-
     <!--SASS-->
     <link rel="stylesheet" href="./styles/scss/pages/main/main.css" />
-    <!--Bootstrap customization-->
-    <link rel="stylesheet" href="./styles/bootstrap/custom.css" />
-    <!--The default font family imported from this file-->
+    <!--Style for all elements-->
     <link rel="stylesheet" href="./styles/style.css" />
 
-    <title>Website</title>
+    <title>Solar Panel Website</title>
   </head>
 
   <!--Navbar SCSS -->
   <nav>
     <ul>
       <li><a class="font-size" href="index.html">Home</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
+      <li><a href="signup.html">Sign up</a></li>
     </ul>
   </nav>
 
@@ -30,15 +26,16 @@
       <div class="decoration"></div>
       <div class="hero">
         <div class="left">
-          <h1>Lorem, ipsum.</h1>
+          <h1>Solar Panel Website</h1>
         </div>
         <div class="right">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-            inventore ullam impedit hic exercitationem ipsam repellat, quibusdam
-            voluptas doloribus obcaecati.
+            Harness the power of the sun with innovative, efficient, and
+            affordable solar panel solutions. We’re here to help you make the
+            switch to renewable energy, reducing your carbon footprint and
+            saving on energy costs.
           </p>
-          <a href="#services">Follow us</a>
+          <a href="#services">What we do</a>
         </div>
       </div>
     </section>
@@ -48,41 +45,64 @@
       <div class="hero bg">
         <div class="left">
           <div class="content">
-            <h1>Lorem</h1>
+            <h1>What We Do</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              error architecto quo.
+              We empower homes and businesses with reliable and sustainable
+              solar energy solutions. Our goal is to make renewable energy
+              accessible, affordable, and impactful.
             </p>
-            <a href="#services-2">Read more</a>
           </div>
         </div>
         <div class="right">
           <div class="img-holder">
-            <img src="./assets/images/team-5-2.jpg" />
+            <img src="./assets/images/panel.jpg" />
           </div>
         </div>
       </div>
     </section>
 
-    <!--Services component with Bootstrap-->
-    <section class="services" id="services-2">
-      <div class="row align-items-center p-4 bg-secondary rounded">
-        <div class="col-md-6">
-          <img
-            src="./assets/images/team-5-2.jpg"
-            alt="Placeholder Image"
-            class="img-fluid rounded mb-4"
-          />
-        </div>
-        <div class="col-md-6 px-4">
-          <h2 class="fw-bold mb-4 text-uppercase">Lorem</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            sapiente error sequi suscipit soluta molestiae deserunt ea a quod
-            impedit.
+    <footer>
+      <div class="footer-infos-holder">
+        <div class="footer-content">
+          <h1>Solar Panel</h1>
+          <p>
+            We’re here to help you make the switch to renewable energy, reducing your carbon footprint and saving on energy costs.
           </p>
+          <div class="social-media">
+            <a href="https://www.linkedin.com//" target="_blank"
+              ><img src="./assets/images/linkedin.svg" alt="Linkedin logo" /></a
+            ><a href="https://x.com/" target="_blank" 
+              ><img src="./assets/images/x.svg" alt="Twitter logo" /></a
+            ><a href="https://www.facebook.com/" target="_blank"
+              ><img src="./assets/images/fb.svg" alt="Facebook logo"
+            /></a>
+          </div>
+        </div>
+        <div class="footer-menus">
+          <div class="locations">
+            <h3>Main Office</h3>
+            <div class="exact-location">
+              <img src="./assets/images/location.svg" />
+              <p>New York, New York</p>
+            </div>
+            <div class="exact-location">
+              <img src="./assets/images/mail.svg" />
+              <p>info@lorem.com</p>
+            </div>
+          </div>
+
+          <div class="quick-links">
+            <h3>Quick links</h3>
+            <p><a href="#services">What we do</a></p>
+            <p><a href="signup.html">Sign up</a></p>
+          </div>
         </div>
       </div>
-    </section>
+    </footer>
+    <div class="copy-right-holder">
+      <div class="text-copy-right">
+        <p>© 2024 Solar Panel INC.</p>
+      </div>
+    </div>
   </body>
 </html>

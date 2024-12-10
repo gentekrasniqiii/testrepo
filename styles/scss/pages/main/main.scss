@@ -1,10 +1,15 @@
 @import "../../abstracts/variables";
 @import "../../abstracts/mixin";
+@import "../../components/footer/footer";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+a {
+  color: $second-text-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
 }
 
 nav {
@@ -12,123 +17,114 @@ nav {
   margin: auto;
   padding: 30px;
   ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flex-component(center, space-between, row);
     width: 100%;
-    list-style-type: none;
   }
-  a {
-    text-decoration: none;
+  li:first-child a {
+    font-weight: $stronger-weight;
+    font-size: map-get($fonts, "sm");
   }
   li:last-child a {
-    @include scnd-button;
+    @include main-button;
   }
 }
 
 .banner {
   position: relative;
-  height: 100vh;
+  height: 90vh;
 }
 
 .services {
   margin-bottom: 80px;
+  .hero {
+    padding: $default-padding;
+  }
 }
 
-.services div {
-  padding: $default-padding;
+.content {
+  @include flex-component(center, center, column);
+  padding-right: 40px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 .banner,
 .services,
 .contact {
-  @include main-holder;
+  @include main-holder(center, center);
+
   @media screen and (max-width: $breakpoint-tablet) {
     width: 100%;
     padding: $default-padding;
     .right {
-      align-items: center;
       margin-top: 20px;
     }
   }
+
   @media screen and (max-width: $breakpoint-mobile) {
     height: 100%;
   }
 }
 
-.bg {
+.bg,
+footer {
   background-color: $gray-text-color;
 }
 
 .hero {
-  @include flex-component;
+  @include flex-component(center, start, row);
   border-radius: 15px;
 
   h1 {
-    text-transform: uppercase;
     font-size: map-get($fonts, "lg");
-    text-align: center;
+    font-weight: $stronger-weight;
+    text-transform: uppercase;
     margin-bottom: 20px;
-    font-weight: 600;
   }
 
   p {
     font-size: map-get($fonts, "sm");
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .left,
   .right {
+    @include flex-component(start, start, column);
     width: 50%;
   }
 
-  .left {
-    @include flex-component;
+  .right {
+    a {
+      @include main-button;
+      width: 150px;
+    }
   }
 
-  .left a, .right a {
-    @include button-default;
-    text-decoration: none;
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .img-holder,
   img {
     @include img-default-holder;
+    border-radius: 11px;
   }
 
   @media screen and (max-width: $breakpoint-tablet) {
-    @include flex-responsiveness;
-
+    @include flex-responsiveness(space-around);
     width: 100%;
 
-    .left {
-      @include flex-component;
-    }
     .left,
     .right {
-      @include content-box(0px);
+      @include flex-component(center, center, column);
+      padding: 0;
       width: 100%;
     }
-    .right button {
-      width: 200px;
-    }
-    .content {
-      @include content-box(0px 60px 0px 0px);
-      padding: 0;
-    }
+    h1,
     p {
       text-align: center;
     }
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    .right button {
-      width: 100%;
+    .img-holder {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
     }
   }
 }

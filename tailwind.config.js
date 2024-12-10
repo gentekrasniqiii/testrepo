@@ -1,17 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: ["signup.html"],
   theme: {
     extend: {
-      colors:{
-        primary:'#03be80',
-        scnd:'#f5f5f7'
+      colors: {
+        primary: "#1c88ec",
+        second:"#45a3fb"
       },
-      fontSize:{
-        large: '32px',
-        small: '24px'
-      }
+      fontSize: {
+        large: "32px"
+      },
     },
   },
   plugins: [],
-}
+};

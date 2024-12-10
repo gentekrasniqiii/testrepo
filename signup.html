@@ -11,19 +11,21 @@
   <body>
     <section class="sign-up">
       <div class="cover">
-        <img src="./assets/images/team-5-2.jpg" alt="Cover Image" />
+        <img src="./assets/images/panel.jpg" alt="Cover Image" />
       </div>
       <div class="sign-form">
         <div>
           <h1 class="uppercase text-large font-bold mb-8">Sign Up</h1>
 
           <!--Form styled with Tailwind CSS-->
-          <form>
+          <form id="signUp">
             <div>
               <label>Name *</label>
               <input
-                type="name"
+                id="name"
+                type="text"
                 name="name"
+                required
                 class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -32,6 +34,8 @@
               <input
                 type="email"
                 name="email"
+                id="email"
+                required
                 class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -41,19 +45,20 @@
               <input
                 type="password"
                 name="password"
+                id="password"
+                required
                 class="w-full p-3 border mb-8 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
             <button
               type="submit"
-              class="w-full py-3 px-6 bg-transparent text-primary border border-primary rounded-lg transform transition-transform hover:scale-[1.02]"
+              class="w-full py-3 px-6 bg-primary text-white border rounded-lg hover:bg-second transition-all duration-300 ease"
             >
               Join
             </button>
           </form>
           <div class="text-holder">
-            <p>Already have an account? <a href="signup.html">Log In</a></p>
             <p>
               By signing up to create an account I accept Company's Terms of Use
               and Privacy Policy.

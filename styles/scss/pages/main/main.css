@@ -1,7 +1,111 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.footer-infos-holder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 100px 0px;
+}
+@media screen and (max-width: 1300px) {
+  .footer-infos-holder {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.footer-infos-holder .footer-content {
+  width: 40%;
+}
+@media screen and (max-width: 1300px) {
+  .footer-infos-holder .footer-content {
+    width: 100%;
+  }
+}
+.footer-infos-holder h1, .footer-infos-holder h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.footer-infos-holder p {
+  font-weight: 300;
+}
+
+.footer-menus {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menus .quick-links p,
+.footer-menus .quick-links .exact-location {
+  margin-bottom: 8px;
+}
+.footer-menus .exact-location {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+.footer-menus .exact-location img {
+  padding-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+@media screen and (max-width: 1300px) {
+  .footer-menus {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  margin-top: 25px;
+  width: 100%;
+}
+.social-media a {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 15px;
+}
+
+.copy-right-holder {
+  background-color: #f5f5f7;
+  border-top: 1px solid rgb(166, 166, 166);
+}
+
+.text-copy-right {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0px;
+}
+.text-copy-right p {
+  text-align: center;
+}
+
+a {
+  color: #1c88ec;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
 }
 
 nav {
@@ -11,41 +115,54 @@ nav {
 }
 nav ul {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
   width: 100%;
-  list-style-type: none;
 }
-nav a {
-  text-decoration: none;
+nav li:first-child a {
+  font-weight: 600;
+  font-size: 24px;
 }
 nav li:last-child a {
   color: #ffffff;
-  padding: 10px 15px;
-  height: 60px;
-  width: 200px;
-  background-color: #03be80;
-  border: 1px solid #03be80;
+  padding: 14px 10px;
+  font-size: 14px;
+  background-color: #1c88ec;
+  border: none;
+  text-align: center;
   border-radius: 10px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 nav li:last-child a:hover {
-  background-color: #028c5e;
+  background-color: #45a3fb;
 }
 
 .banner {
   position: relative;
-  height: 100vh;
+  height: 90vh;
 }
 
 .services {
   margin-bottom: 80px;
 }
-
-.services div {
+.services .hero {
   padding: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 40px;
+}
+@media screen and (max-width: 1300px) {
+  .content {
+    padding: 0;
+  }
 }
 
 .banner,
@@ -55,8 +172,8 @@ nav li:last-child a:hover {
   margin-right: auto;
   width: 1199px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1300px) {
   .banner,
@@ -68,7 +185,6 @@ nav li:last-child a:hover {
   .banner .right,
   .services .right,
   .contact .right {
-    align-items: center;
     margin-top: 20px;
   }
 }
@@ -80,59 +196,58 @@ nav li:last-child a:hover {
   }
 }
 
-.bg {
+.bg,
+footer {
   background-color: #f5f5f7;
 }
 
 .hero {
   display: flex;
   align-items: center;
+  justify-content: start;
+  flex-direction: row;
   border-radius: 15px;
 }
 .hero h1 {
-  text-transform: uppercase;
   font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
   font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .hero p {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .hero .left,
 .hero .right {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
   width: 50%;
 }
-.hero .left {
-  display: flex;
-  align-items: center;
-}
-.hero .left a, .hero .right a {
-  font-size: 24px;
-  color: #03be80;
-  padding: 10px 15px;
-  height: 60px;
-  width: 200px;
-  background-color: transparent;
-  border: 1px solid #03be80;
+.hero .right a {
+  color: #ffffff;
+  padding: 14px 10px;
+  font-size: 14px;
+  background-color: #1c88ec;
+  border: none;
+  text-align: center;
   border-radius: 10px;
+  text-transform: uppercase;
   cursor: pointer;
-  text-decoration: none;
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: 0.3s ease;
+  width: 150px;
 }
-.hero .left a:hover, .hero .right a:hover {
-  transform: scale(1.02);
+.hero .right a:hover {
+  background-color: #45a3fb;
 }
-.hero .img-holder,
 .hero img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 11px;
 }
 @media screen and (max-width: 1300px) {
   .hero {
@@ -140,35 +255,23 @@ nav li:last-child a:hover {
     justify-content: space-around;
     width: 100%;
   }
-  .hero .left {
-    display: flex;
-    align-items: center;
-  }
   .hero .left,
   .hero .right {
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0px;
+    padding: 0;
     width: 100%;
   }
-  .hero .right button {
-    width: 200px;
-  }
-  .hero .content {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0px 60px 0px 0px;
-    padding: 0;
-  }
+  .hero h1,
   .hero p {
     text-align: center;
   }
-}
-@media screen and (max-width: 640px) {
-  .hero .right button {
-    width: 100%;
+  .hero .img-holder {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 }
 

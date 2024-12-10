@@ -1,6 +1,8 @@
 .sign-up {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
   height: 100%;
   width: 100%;
 }
@@ -39,8 +41,9 @@
   width: 50%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .sign-form h1 {
   text-align: center;
@@ -50,8 +53,8 @@
 }
 .sign-form .text-holder {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   text-align: center;
 }
@@ -61,19 +64,15 @@
   color: rgb(166, 166, 166);
 }
 .sign-form p a {
-  color: #03be80;
+  color: #1c88ec;
   text-decoration: underline;
-  cursor: pointer;
 }
 @media screen and (max-width: 1300px) {
   .sign-form {
     width: 100%;
     height: 80%;
   }
-  .sign-form h1 {
-    padding-top: 30px;
-  }
-  .sign-form form {
+  .sign-form h1, .sign-form form {
     padding: 30px;
   }
 }/*# sourceMappingURL=signup.css.map */
