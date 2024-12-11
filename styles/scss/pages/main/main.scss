@@ -12,7 +12,7 @@ ul {
   list-style-type: none;
 }
 
-header{
+header {
   position: sticky;
   top: 0;
   left: 0;
@@ -60,8 +60,7 @@ nav {
 }
 
 .banner,
-.services,
-.contact {
+.services {
   padding: $default-padding;
   @include main-holder(center, center);
 
@@ -70,10 +69,6 @@ nav {
     .right {
       margin-top: 20px;
     }
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    height: 100%;
   }
 }
 

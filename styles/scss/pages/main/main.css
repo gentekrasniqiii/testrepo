@@ -50,7 +50,7 @@
   margin-bottom: 8px;
 }
 .footer-menus .exact-location img {
-  padding-right: 10px;
+  padding-right: 8px;
   width: 24px;
   height: 24px;
 }
@@ -178,8 +178,7 @@ nav li:last-child a:hover {
 }
 
 .banner,
-.services,
-.contact {
+.services {
   padding: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -190,21 +189,12 @@ nav li:last-child a:hover {
 }
 @media screen and (max-width: 1300px) {
   .banner,
-  .services,
-  .contact {
+  .services {
     width: 100%;
   }
   .banner .right,
-  .services .right,
-  .contact .right {
+  .services .right {
     margin-top: 20px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .banner,
-  .services,
-  .contact {
-    height: 100%;
   }
 }
 

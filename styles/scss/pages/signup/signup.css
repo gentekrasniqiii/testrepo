@@ -45,6 +45,9 @@
   justify-content: center;
   flex-direction: column;
 }
+.sign-form .sign-form-holder {
+  padding: 40px;
+}
 .sign-form h1 {
   text-align: center;
 }
@@ -58,21 +61,27 @@
   flex-direction: column;
   text-align: center;
 }
-.sign-form p {
+.sign-form .text-holder p {
   padding-top: 30px;
   width: 80%;
   color: rgb(166, 166, 166);
-}
-.sign-form p a {
-  color: #1c88ec;
-  text-decoration: underline;
 }
 @media screen and (max-width: 1300px) {
   .sign-form {
     width: 100%;
     height: 80%;
   }
-  .sign-form h1, .sign-form form {
-    padding: 30px;
-  }
+}
+.sign-form .msg-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 15px;
+  height: 30px;
+  width: 100%;
+}
+.sign-form .msg-holder p {
+  color: #a63232;
+  text-align: center;
 }/*# sourceMappingURL=signup.css.map */
