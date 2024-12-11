@@ -12,6 +12,15 @@ ul {
   list-style-type: none;
 }
 
+header{
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $base-color;
+  z-index: 1;
+}
+
 nav {
   max-width: 1199px;
   margin: auto;
@@ -31,7 +40,7 @@ nav {
 
 .banner {
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 104px);
 }
 
 .services {
@@ -53,11 +62,11 @@ nav {
 .banner,
 .services,
 .contact {
+  padding: $default-padding;
   @include main-holder(center, center);
 
   @media screen and (max-width: $breakpoint-tablet) {
     width: 100%;
-    padding: $default-padding;
     .right {
       margin-top: 20px;
     }
@@ -133,7 +142,7 @@ footer {
 .decoration {
   position: absolute;
   top: 5%;
-  right: 0%;
+  right: 4%;
   background-image: url("../../../../assets/images/decoration.svg");
   width: 40px;
   height: 40px;

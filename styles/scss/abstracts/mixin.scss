@@ -15,7 +15,8 @@
 }
 
 @mixin main-button {
-  color: $base-text-color;
+  display: block;
+  color: $base-color;
   padding: 14px 10px;
   font-size: 14px;
   background-color: $second-text-color;

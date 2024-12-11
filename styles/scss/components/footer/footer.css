@@ -24,7 +24,8 @@
     width: 100%;
   }
 }
-.footer-infos-holder h1, .footer-infos-holder h3 {
+.footer-infos-holder h1,
+.footer-infos-holder h3 {
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -37,8 +38,8 @@
   display: flex;
   justify-content: space-between;
 }
-.footer-menus .quick-links p,
-.footer-menus .quick-links .exact-location {
+.footer-menus .exact-location,
+.footer-menus .quick-links p {
   margin-bottom: 8px;
 }
 .footer-menus .exact-location {
@@ -46,6 +47,7 @@
   align-items: center;
   justify-content: start;
   flex-direction: row;
+  margin-bottom: 8px;
 }
 .footer-menus .exact-location img {
   padding-right: 10px;

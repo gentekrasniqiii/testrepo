@@ -24,7 +24,8 @@
     width: 100%;
   }
 }
-.footer-infos-holder h1, .footer-infos-holder h3 {
+.footer-infos-holder h1,
+.footer-infos-holder h3 {
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -37,8 +38,8 @@
   display: flex;
   justify-content: space-between;
 }
-.footer-menus .quick-links p,
-.footer-menus .quick-links .exact-location {
+.footer-menus .exact-location,
+.footer-menus .quick-links p {
   margin-bottom: 8px;
 }
 .footer-menus .exact-location {
@@ -46,6 +47,7 @@
   align-items: center;
   justify-content: start;
   flex-direction: row;
+  margin-bottom: 8px;
 }
 .footer-menus .exact-location img {
   padding-right: 10px;
@@ -108,6 +110,15 @@ ul {
   list-style-type: none;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
 nav {
   max-width: 1199px;
   margin: auto;
@@ -125,6 +136,7 @@ nav li:first-child a {
   font-size: 24px;
 }
 nav li:last-child a {
+  display: block;
   color: #ffffff;
   padding: 14px 10px;
   font-size: 14px;
@@ -142,7 +154,7 @@ nav li:last-child a:hover {
 
 .banner {
   position: relative;
-  height: 90vh;
+  height: calc(100vh - 104px);
 }
 
 .services {
@@ -168,6 +180,7 @@ nav li:last-child a:hover {
 .banner,
 .services,
 .contact {
+  padding: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 1199px;
@@ -180,7 +193,6 @@ nav li:last-child a:hover {
   .services,
   .contact {
     width: 100%;
-    padding: 30px;
   }
   .banner .right,
   .services .right,
@@ -227,6 +239,7 @@ footer {
   width: 50%;
 }
 .hero .right a {
+  display: block;
   color: #ffffff;
   padding: 14px 10px;
   font-size: 14px;
@@ -279,7 +292,7 @@ footer {
 .decoration {
   position: absolute;
   top: 5%;
-  right: 0%;
+  right: 4%;
   background-image: url("../../../../assets/images/decoration.svg");
   width: 40px;
   height: 40px;
