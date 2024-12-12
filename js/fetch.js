@@ -10,8 +10,7 @@ async function getTextfromFile(file) {
 
   document.getElementById("heading").innerHTML = heading;
   document.getElementById("desc").innerHTML = desc;
-}
-// call the method 
+} 
 getTextfromFile("fetch.txt");
 
 
