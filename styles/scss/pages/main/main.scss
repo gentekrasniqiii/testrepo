@@ -52,8 +52,6 @@ nav {
 
 .content {
   @include flex-component(center, center, column);
-  padding-right: 40px;
-
   @media screen and (max-width: $breakpoint-tablet) {
     padding: 0;
   }
@@ -96,6 +94,7 @@ footer {
   .left,
   .right {
     @include flex-component(start, start, column);
+    padding-right: $default-padding;
     width: 50%;
   }
 
@@ -141,4 +140,8 @@ footer {
   background-image: url("../../../../assets/images/decoration.svg");
   width: 40px;
   height: 40px;
+}
+
+.txt-display {
+  padding: 50px;
 }

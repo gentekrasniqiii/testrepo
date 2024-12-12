@@ -169,7 +169,6 @@ nav li:last-child a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-right: 40px;
 }
 @media screen and (max-width: 1300px) {
   .content {
@@ -226,6 +225,7 @@ footer {
   align-items: start;
   justify-content: start;
   flex-direction: column;
+  padding-right: 30px;
   width: 50%;
 }
 .hero .right a {
@@ -286,4 +286,8 @@ footer {
   background-image: url("../../../../assets/images/decoration.svg");
   width: 40px;
   height: 40px;
+}
+
+.txt-display {
+  padding: 50px;
 }/*# sourceMappingURL=main.css.map */

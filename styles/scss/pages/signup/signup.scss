@@ -60,7 +60,7 @@
   .msg-holder {
     @include flex-component(center, center, row);
     margin-top: 15px;
-    height: 30px;
+    height: 50px;
     width: 100%;
     p {
       color: $error-color;
