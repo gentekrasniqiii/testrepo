@@ -131,12 +131,11 @@ nav ul {
   flex-direction: row;
   width: 100%;
 }
-nav li a {
+nav li:first-child a, nav li:nth-child(2) a {
   font-size: 14px;
   font-weight: 600;
 }
 nav li:last-child a {
-  font-size: 14px;
   display: block;
   color: #ffffff;
   padding: 14px 10px;

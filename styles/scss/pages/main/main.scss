@@ -29,12 +29,11 @@ nav {
     @include flex-component(center, space-between, row);
     width: 100%;
   }
-  li a {
+  li:first-child a, li:nth-child(2) a {
     font-size: map-get($fonts, "s");
     font-weight: $stronger-weight;
   }
   li:last-child a {
-    font-size: map-get($fonts, "s");
     @include main-button;
   }
 }
