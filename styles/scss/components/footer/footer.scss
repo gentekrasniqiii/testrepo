@@ -1,6 +1,10 @@
 @import "../../abstracts/variables";
 @import "../../abstracts/mixin";
 
+footer {
+  background-color: $gray-text-color;
+}
+
 .footer-infos-holder {
   @include main-holder(start, space-between);
   padding: 100px 0px;

@@ -24,12 +24,13 @@ header {
 nav {
   max-width: 1199px;
   margin: auto;
-  padding: 30px;  
+  padding: 30px;
   ul {
     @include flex-component(center, space-between, row);
     width: 100%;
   }
-  li:first-child a, li:nth-child(2) a {
+  li:first-child a,
+  li:nth-child(2) a {
     font-size: map-get($fonts, "s");
     font-weight: $stronger-weight;
   }
@@ -39,14 +40,89 @@ nav {
 }
 
 .banner {
-  position: relative;
   height: calc(100vh - 104px);
+  .hero p {
+    margin-bottom: 40px;
+  }
 }
 
 .services {
   margin-bottom: 80px;
   .hero {
     padding: $default-padding;
+    border-radius: 15px;
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.banner,
+.services {
+  @include main-holder(center, center);
+  padding: $default-padding;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    .right {
+      margin-top: 20px;
+    }
+  }
+}
+
+.hero {
+  @include flex-component(center, start, row);
+
+  h1 {
+    font-size: map-get($fonts, "lg");
+    font-weight: $stronger-weight;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: map-get($fonts, "m");
+  }
+
+  .left {
+    @include flex-component(start, start, column);
+    padding-right: $default-padding;
+    width: 50%;
+  }
+
+  .right {
+    @include flex-component(start, start, column);
+    width: 50%;
+    a {
+      @include main-button;
+      width: 150px;
+    }
+  }
+
+  .img-holder {
+    padding: $default-padding;
+    img {
+      @include img-default-holder;
+      border-radius: 11px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    @include flex-responsiveness(space-around);
+    width: 100%;
+
+    .left,
+    .right {
+      @include flex-component(center, center, column);
+      width: 100%;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+    .img-holder {
+      margin: auto;
+      width: 60%;
+    }
   }
 }
 
@@ -57,81 +133,10 @@ nav {
   }
 }
 
-.banner,
-.services {
-  padding: $default-padding;
-  @include main-holder(center, center);
-
-  @media screen and (max-width: $breakpoint-tablet) {
-    width: 100%;
-    .right {
-      margin-top: 20px;
-    }
-  }
-}
-
-.bg,
-footer {
-  background-color: $gray-text-color;
-}
-
-.hero {
-  @include flex-component(center, start, row);
-  border-radius: 15px;
-
-  h1 {
-    font-size: map-get($fonts, "lg");
-    font-weight: $stronger-weight;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  p {
-    font-size: map-get($fonts, "m");
-    margin-bottom: 40px;
-  }
-
-  .left,
-  .right {
-    @include flex-component(start, start, column);
-    padding-right: $default-padding;
-    width: 50%;
-  }
-
-  .right {
-    a {
-      @include main-button;
-      width: 150px;
-    }
-  }
-
-  img {
-    @include img-default-holder;
-    border-radius: 11px;
-  }
-
-  @media screen and (max-width: $breakpoint-tablet) {
-    @include flex-responsiveness(space-around);
-    width: 100%;
-
-    .left,
-    .right {
-      @include flex-component(center, center, column);
-      padding: 0;
-      width: 100%;
-    }
-    h1,
-    p {
-      text-align: center;
-    }
-    .img-holder {
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
-  }
-}
-
 .txt-display {
   padding: 50px;
+}
+
+.bg {
+  background-color: $gray-text-color;
 }
