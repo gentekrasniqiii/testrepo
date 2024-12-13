@@ -131,11 +131,12 @@ nav ul {
   flex-direction: row;
   width: 100%;
 }
-nav li:first-child a {
+nav li a {
+  font-size: 14px;
   font-weight: 600;
-  font-size: 24px;
 }
 nav li:last-child a {
+  font-size: 14px;
   display: block;
   color: #ffffff;
   padding: 14px 10px;
@@ -276,16 +277,6 @@ footer {
     margin-right: auto;
     width: 50%;
   }
-}
-
-/*Added a small decoration using css positioning*/
-.decoration {
-  position: absolute;
-  top: 5%;
-  right: 4%;
-  background-image: url("../../../../assets/images/decoration.svg");
-  width: 40px;
-  height: 40px;
 }
 
 .txt-display {

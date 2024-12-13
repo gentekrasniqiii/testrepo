@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Traffic light simmunlation!" />
+
+    <link rel="stylesheet" href="./styles/scss/pages/simulation/simulation.css"/>
+    <link rel="stylesheet" href="./styles/bootstrap/custom.css" />  
+
+    <title>Traffic Light Simulator</title>
+  </head>
+  <body>
+    <section class="traffic_simulator">
+      <div class="traffic_panel">
+        <div class="panel_holder">
+          <h2>Traffic Light Simulator</h2>
+          <div class="panel">
+            <div class="traffic_light">
+              <div class="light red"></div>
+              <div class="light yellow"></div>
+              <div class="light green"></div>
+            </div>
+          </div>
+        </div>
+        <div class="alert_holder"></div>
+        <audio class="click_sound" src="./assets/audios/click_sound.mp3"></audio>
+      </div>
+    </section>
+    <script src="./js/simulation.js"></script>
+  </body>
+</html>

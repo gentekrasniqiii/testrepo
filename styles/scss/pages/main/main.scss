@@ -24,16 +24,17 @@ header {
 nav {
   max-width: 1199px;
   margin: auto;
-  padding: 30px;
+  padding: 30px;  
   ul {
     @include flex-component(center, space-between, row);
     width: 100%;
   }
-  li:first-child a {
+  li a {
+    font-size: map-get($fonts, "s");
     font-weight: $stronger-weight;
-    font-size: map-get($fonts, "sm");
   }
   li:last-child a {
+    font-size: map-get($fonts, "s");
     @include main-button;
   }
 }
@@ -87,7 +88,7 @@ footer {
   }
 
   p {
-    font-size: map-get($fonts, "sm");
+    font-size: map-get($fonts, "m");
     margin-bottom: 40px;
   }
 
@@ -130,16 +131,6 @@ footer {
       width: 50%;
     }
   }
-}
-
-/*Added a small decoration using css positioning*/
-.decoration {
-  position: absolute;
-  top: 5%;
-  right: 4%;
-  background-image: url("../../../../assets/images/decoration.svg");
-  width: 40px;
-  height: 40px;
 }
 
 .txt-display {
