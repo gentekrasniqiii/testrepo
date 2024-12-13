@@ -132,7 +132,7 @@ nav ul {
   width: 100%;
 }
 nav li:first-child a, nav li:nth-child(2) a {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 nav li:last-child a {
