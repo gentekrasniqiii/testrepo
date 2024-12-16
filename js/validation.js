@@ -1,3 +1,9 @@
+/* When you are making custom validations, make sure to disable the default ones. Otherwise, for the user
+* it will be very confusing when they see errors everywhere. So what can you do is to extend the check, by
+* making required field text appear as custom and remove the 'required' attribute to preven the display
+* of the default error. This is much easily handled with react and angular since you are able to check the
+* form state after submission with some libraries.
+*/
 document.getElementById("signUp").addEventListener("submit", function (event) {
   event.preventDefault();
   let name = document.getElementById("name").value;

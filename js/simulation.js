@@ -1,4 +1,7 @@
 
+/* The structure seems very good, minimalist and functional. The only tip may be to functionalise the assignment
+* of the colors, since its like a repetative operation, but it is not necessary 
+*/
 // traffic lights
 const redButton = document.querySelector(".red");
 const yellowButton = document.querySelector(".yellow");
@@ -12,29 +15,29 @@ let lastClickedButton;
 
 // created the handleButtonClick arrow function to make code more modular
 const handleButtonClick = (button, color, alert_message, alert_class_color) => {
-  if (lastClickedButton) {
-    lastClickedButton.style.backgroundColor = "";
-  }
+    if (lastClickedButton) {
+        lastClickedButton.style.backgroundColor = "";
+    }
 
-  clickSound.play();
-  button.style.backgroundColor = color;
+    clickSound.play();
+    button.style.backgroundColor = color;
 
-  alertContainer.innerHTML = `
+    alertContainer.innerHTML = `
     <div class="alert ${alert_class_color} text-center" role="alert">
       ${alert_message}
     </div>
   `;
-  lastClickedButton = button;
+    lastClickedButton = button;
 };
 
 redButton.addEventListener("click", () => {
-  handleButtonClick(redButton, "#a70000", "RED: STOP", "alert-danger");
+    handleButtonClick(redButton, "#a70000", "RED: STOP", "alert-danger");
 });
 
 yellowButton.addEventListener("click", () => {
-  handleButtonClick(yellowButton, "#ffa500", "YELLOW: GET READY","alert-warning");
+    handleButtonClick(yellowButton, "#ffa500", "YELLOW: GET READY", "alert-warning");
 });
 
 greenButton.addEventListener("click", () => {
-  handleButtonClick(greenButton, "#317f43", "GREEN: GO", "alert-success");
+    handleButtonClick(greenButton, "#317f43", "GREEN: GO", "alert-success");
 });
