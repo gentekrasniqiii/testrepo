@@ -52,7 +52,8 @@
   text-align: center;
 }
 .sign-form label {
-  color: rgb(166, 166, 166);
+  padding-left: 2px;
+  color: #646464;
 }
 .sign-form .text-holder {
   display: flex;
@@ -64,7 +65,7 @@
 .sign-form .text-holder p {
   padding-top: 30px;
   width: 80%;
-  color: rgb(166, 166, 166);
+  color: #646464;
 }
 @media screen and (max-width: 1300px) {
   .sign-form {

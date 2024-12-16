@@ -41,13 +41,14 @@ nav {
 
 .banner {
   height: calc(100vh - 104px);
+  padding: $default-padding;
   .hero p {
     margin-bottom: 40px;
   }
 }
 
 .services {
-  margin-bottom: 80px;
+  padding: 115px 30px 80px 30px;
   .hero {
     padding: $default-padding;
     border-radius: 15px;
@@ -60,7 +61,6 @@ nav {
 .banner,
 .services {
   @include main-holder(center, center);
-  padding: $default-padding;
 
   @media screen and (max-width: $breakpoint-tablet) {
     width: 100%;
@@ -103,6 +103,8 @@ nav {
     img {
       @include img-default-holder;
       border-radius: 11px;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -120,8 +122,14 @@ nav {
       text-align: center;
     }
     .img-holder {
-      margin: auto;
+      margin-top: 10px;
       width: 60%;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    .img-holder {
+      padding: 0;
     }
   }
 }
@@ -135,6 +143,9 @@ nav {
 
 .txt-display {
   padding: 50px;
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
 }
 
 .bg {

@@ -577,7 +577,7 @@ video {
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(28 136 236 / var(--tw-bg-opacity, 1));
+  background-color: rgb(51 102 204 / var(--tw-bg-opacity, 1));
 }
 
 .p-3 {
@@ -629,7 +629,7 @@ video {
 
 .hover\:bg-second:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(69 163 251 / var(--tw-bg-opacity, 1));
+  background-color: rgb(28 136 236 / var(--tw-bg-opacity, 1));
 }
 
 .focus\:outline-none:focus {
@@ -645,5 +645,5 @@ video {
 
 .focus\:ring-primary:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(28 136 236 / var(--tw-ring-opacity, 1));
+  --tw-ring-color: rgb(51 102 204 / var(--tw-ring-opacity, 1));
 }

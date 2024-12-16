@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Sign up!">
+    <meta name="description" content="Sign up!"/>
     <link rel="stylesheet" href="./styles/scss/pages/signup/signup.css" />
     <link rel="stylesheet" href="./styles/tailwind/output.css" />
     <link rel="stylesheet" href="./styles/style.css" />
@@ -12,7 +12,7 @@
   <body>
     <section class="sign-up">
       <div class="cover">
-        <img src="./assets/images/panel.avif" alt="Cover Image" />
+        <img src="./assets/images/panel.avif" alt="Cover Image" loading="lazy"/>
       </div>
       <div class="sign-form">
         <div class="sign-form-holder">
@@ -21,7 +21,7 @@
 
           <form id="signUp" novalidate>
             <div>
-              <label>Name *</label>
+              <label for="name">Name *</label>
               <input
                 id="name"
                 type="text"
@@ -30,7 +30,7 @@
               />
             </div>
             <div>
-              <label>Email *</label>
+              <label for="email">Email *</label>
               <input
                 type="email"
                 name="email" 
@@ -40,7 +40,7 @@
             </div>
 
             <div>
-              <label>Password *</label>
+              <label for="password">Password *</label>
               <input
                 type="password"
                 name="password"

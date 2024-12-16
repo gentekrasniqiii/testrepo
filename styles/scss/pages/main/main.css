@@ -28,12 +28,17 @@ footer {
     width: 100%;
   }
 }
-.footer-infos-holder h1,
-.footer-infos-holder h3 {
-  font-weight: 600;
+.footer-infos-holder .footer-content h2 {
+  font-size: 32px;
   margin-bottom: 20px;
 }
-.footer-infos-holder p {
+.footer-infos-holder .footer-content h1,
+.footer-infos-holder .footer-content h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.footer-infos-holder .footer-content p {
   font-weight: 300;
 }
 
@@ -42,7 +47,12 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-.footer-menus .exact-location,
+.footer-menus h3 {
+  margin-bottom: 20px;
+}
+.footer-menus .exact-location {
+  margin-bottom: 8px;
+}
 .footer-menus .quick-links p {
   margin-bottom: 8px;
 }
@@ -78,16 +88,23 @@ footer {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   margin-right: 15px;
 }
+.social-media a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .copy-right-holder {
   background-color: #f5f5f7;
-  border-top: 1px solid rgb(166, 166, 166);
+  border-top: 1px solid #646464;
 }
 
 .text-copy-right {
@@ -105,7 +122,7 @@ footer {
 }
 
 a {
-  color: #1c88ec;
+  color: #3366CC;
   text-decoration: none;
   cursor: pointer;
 }
@@ -145,7 +162,7 @@ nav li:last-child a {
   color: #ffffff;
   padding: 14px 10px;
   font-size: 14px;
-  background-color: #1c88ec;
+  background-color: #3366CC;
   border: none;
   text-align: center;
   border-radius: 10px;
@@ -154,18 +171,19 @@ nav li:last-child a {
   transition: 0.3s ease;
 }
 nav li:last-child a:hover {
-  background-color: #45a3fb;
+  background-color: #1c88ec;
 }
 
 .banner {
   height: calc(100vh - 104px);
+  padding: 30px;
 }
 .banner .hero p {
   margin-bottom: 40px;
 }
 
 .services {
-  margin-bottom: 80px;
+  padding: 115px 30px 80px 30px;
 }
 .services .hero {
   padding: 30px;
@@ -183,7 +201,6 @@ nav li:last-child a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
 }
 @media screen and (max-width: 1300px) {
   .banner,
@@ -230,7 +247,7 @@ nav li:last-child a:hover {
   color: #ffffff;
   padding: 14px 10px;
   font-size: 14px;
-  background-color: #1c88ec;
+  background-color: #3366CC;
   border: none;
   text-align: center;
   border-radius: 10px;
@@ -240,7 +257,7 @@ nav li:last-child a:hover {
   width: 150px;
 }
 .hero .right a:hover {
-  background-color: #45a3fb;
+  background-color: #1c88ec;
 }
 .hero .img-holder {
   padding: 30px;
@@ -251,6 +268,8 @@ nav li:last-child a:hover {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 11px;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 1300px) {
   .hero {
@@ -271,8 +290,14 @@ nav li:last-child a:hover {
     text-align: center;
   }
   .hero .img-holder {
-    margin: auto;
+    margin-top: 10px;
     width: 60%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hero .img-holder {
+    padding: 0;
   }
 }
 
@@ -290,6 +315,11 @@ nav li:last-child a:hover {
 
 .txt-display {
   padding: 50px;
+}
+@media screen and (max-width: 1300px) {
+  .txt-display {
+    padding: 0;
+  }
 }
 
 .bg {
