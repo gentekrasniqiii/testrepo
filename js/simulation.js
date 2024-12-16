@@ -13,6 +13,13 @@ const alertContainer = document.querySelector(".alert_holder");
 
 let lastClickedButton;
 
+// Created the traffic_color array to hold the data for each button
+const traffic_colors = [
+    { button: redButton, color: "#a70000", message: "RED: STOP", alertClass: "alert-danger" },
+    { button: yellowButton, color: "#ffa500", message: "YELLOW: GET READY", alertClass: "alert-warning" },
+    { button: greenButton, color: "#317f43", message: "GREEN: GO", alertClass: "alert-success" }
+];
+
 // created the handleButtonClick arrow function to make code more modular
 const handleButtonClick = (button, color, alert_message, alert_class_color) => {
     if (lastClickedButton) {
@@ -30,14 +37,9 @@ const handleButtonClick = (button, color, alert_message, alert_class_color) => {
     lastClickedButton = button;
 };
 
-redButton.addEventListener("click", () => {
-    handleButtonClick(redButton, "#a70000", "RED: STOP", "alert-danger");
-});
-
-yellowButton.addEventListener("click", () => {
-    handleButtonClick(yellowButton, "#ffa500", "YELLOW: GET READY", "alert-warning");
-});
-
-greenButton.addEventListener("click", () => {
-    handleButtonClick(greenButton, "#317f43", "GREEN: GO", "alert-success");
+// Here interated inside traffic_colors array added eventListener for each button, and now the function handleButtonClick is called only once
+traffic_colors.forEach(v => {
+    v.button.addEventListener("click", () => {
+        handleButtonClick(v.button, v.color, v.message, v.alertClass);
+    });
 });

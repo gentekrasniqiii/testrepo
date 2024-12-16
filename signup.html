@@ -18,14 +18,14 @@
         <div class="sign-form-holder">
           <h1 class="uppercase text-large font-bold mb-8">Sign Up</h1>
           <!--Form styled with Tailwind CSS-->
-          <form id="signUp">
+
+          <form id="signUp" novalidate>
             <div>
               <label>Name *</label>
               <input
                 id="name"
                 type="text"
                 name="name"
-                required
                 class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -33,9 +33,8 @@
               <label>Email *</label>
               <input
                 type="email"
-                name="email"
+                name="email" 
                 id="email"
-                required
                 class="w-full p-3 mb-8 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
@@ -46,7 +45,6 @@
                 type="password"
                 name="password"
                 id="password"
-                required
                 class="w-full p-3 border mb-8 border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
