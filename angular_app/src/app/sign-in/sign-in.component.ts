@@ -2,10 +2,11 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { UserService } from '../service/user.service';
 // Zod for validation
 import { z } from 'zod';
 // Interface
-import { User } from './user';
+import { User } from '../interface/user';
 
 const userSchema = z.object({
   email: z.string().email({ message: 'Invalid email address.' }),
@@ -25,6 +26,7 @@ const userSchema = z.object({
 })
 export class SignInComponent implements OnInit {
   private form = inject(FormBuilder);
+  private userService = inject(UserService);
   private router = inject(Router);
 
   signInForm: FormGroup = this.form.group({
@@ -35,18 +37,15 @@ export class SignInComponent implements OnInit {
   users: User[] = [];
 
   ngOnInit(): void {
-    this.userData();
+    this.loadUserData();
   }
 
   message: string = '';
   messageType: string = '';
 
-  // Fetch data from JSON For this we could use a seperate service file
-  async userData(): Promise<void> {
+  async loadUserData(): Promise<void> {
     try {
-      const response = await fetch('./assets/data/users.json');
-      const data: User[] = await response.json();
-      this.users = data;
+      this.users = await this.userService.getUsers();
     } catch (error) {
       this.message = 'Error fetching user data.';
       this.messageType = 'danger';
@@ -78,8 +77,7 @@ export class SignInComponent implements OnInit {
     );
     if (checkUser) {
       this.router.navigate(['/dashboard']);
-      this.message = 'User successfully logged in!';
-      this.messageType = 'success';
+      //Here was displayed the message that you are logged in but replaced through ridirecting
     } else {
       this.message = 'This user does not exist in our storage.';
       this.messageType = 'danger';

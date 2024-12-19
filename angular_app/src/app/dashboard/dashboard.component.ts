@@ -1,13 +1,32 @@
+// dashboard.component.ts
+import { Component, OnInit, inject } from '@angular/core';
+import { UserService } from '../service/user.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { User } from '../interface/user';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, RouterModule],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
+  imports: [CommonModule],
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent {
-  title = 'angular_app';
+export class DashboardComponent implements OnInit {
+  users: User[] = [];
+  message: string = '';
+  messageType: string = '';
+  private userService = inject(UserService);
+
+  ngOnInit(): void {
+    this.loadUserData();
+  }
+
+  // Call the UserService to fetch users
+  async loadUserData(): Promise<void> {
+    try {
+      this.users = await this.userService.getUsers();
+    } catch (error) {
+      this.message = 'Error fetching user data.';
+      this.messageType = 'danger';
+    }
+  }
 }
