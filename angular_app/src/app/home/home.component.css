@@ -1,0 +1,299 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-Regular.ttf") format("ttf");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.banner {
+  height: calc(100vh - 100px);
+  padding: 30px;
+}
+.banner .hero p {
+  margin-bottom: 40px;
+}
+
+.services {
+  padding: 115px 30px 80px 30px;
+}
+.services .hero {
+  padding: 30px;
+  border-radius: 15px;
+}
+.services .hero h1 {
+  margin-bottom: 20px;
+}
+
+.banner,
+.services {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1300px) {
+  .banner,
+  .services {
+    width: 100%;
+  }
+  .banner .right,
+  .services .right {
+    margin-top: 20px;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.hero p {
+  font-size: 24px;
+}
+.hero .left {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  padding-right: 30px;
+  width: 50%;
+}
+.hero .right {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  width: 50%;
+}
+.hero .right a {
+  display: block;
+  color: #ffffff;
+  padding: 14px 10px;
+  font-size: 14px;
+  background-color: #3366cc;
+  border: none;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 150px;
+  text-decoration: none;
+}
+.hero .right a:hover {
+  background-color: #1c88ec;
+}
+.hero .img-holder {
+  padding: 30px;
+}
+.hero .img-holder img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 11px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 1300px) {
+  .hero {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .hero .left,
+  .hero .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero h1,
+  .hero p {
+    text-align: center;
+  }
+  .hero .img-holder {
+    margin-top: 10px;
+    width: 60%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  .hero .img-holder {
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1300px) {
+  .content {
+    padding: 0;
+  }
+}
+
+.txt-display {
+  padding: 50px;
+}
+@media screen and (max-width: 1300px) {
+  .txt-display {
+    padding: 0;
+  }
+}
+
+.bg {
+  background-color: #f5f5f7;
+}
+
+footer {
+  background-color: #f5f5f7;
+}
+
+.footer-infos-holder {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 100px 0px;
+}
+@media screen and (max-width: 1300px) {
+  .footer-infos-holder {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.footer-infos-holder .footer-content {
+  width: 40%;
+}
+@media screen and (max-width: 1300px) {
+  .footer-infos-holder .footer-content {
+    width: 100%;
+  }
+}
+.footer-infos-holder .footer-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.footer-infos-holder .footer-content h1,
+.footer-infos-holder .footer-content h3 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.footer-infos-holder .footer-content p {
+  font-weight: 300;
+}
+
+.footer-menus {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menus h3 {
+  margin-bottom: 20px;
+}
+.footer-menus .exact-location {
+  margin-bottom: 8px;
+}
+.footer-menus .quick-links p {
+  margin-bottom: 8px;
+}
+.footer-menus .exact-location {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+.footer-menus .exact-location img {
+  padding-right: 8px;
+  width: 24px;
+  height: 24px;
+}
+@media screen and (max-width: 1300px) {
+  .footer-menus {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.social-media {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: row;
+  margin-top: 25px;
+  width: 100%;
+}
+.social-media a {
+  border: 1px solid #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 15px;
+}
+.social-media a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.copy-right-holder {
+  background-color: #f5f5f7;
+  border-top: 1px solid #646464;
+}
+
+.text-copy-right {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1199px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0px;
+}
+.text-copy-right p {
+  text-align: center;
+}/*# sourceMappingURL=home.component.css.map */

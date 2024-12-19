@@ -1,0 +1,219 @@
+@import "../../styles/base/styles.scss";
+
+.banner {
+  height: calc(100vh - 90px);
+  padding: $default-padding;
+  .hero p {
+    margin-bottom: 40px;
+  }
+}
+
+.services {
+  padding: 115px 30px 80px 30px;
+  .hero {
+    padding: $default-padding;
+    border-radius: 15px;
+    h1 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.banner,
+.services {
+  @include main-holder(center, center);
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    .right {
+      margin-top: 20px;
+    }
+  }
+}
+
+.hero {
+  @include flex-component(center, start, row);
+
+  h1 {
+    font-size: map-get($fonts, "lg");
+    font-weight: $stronger-weight;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: map-get($fonts, "m");
+  }
+
+  .left {
+    @include flex-component(start, start, column);
+    padding-right: $default-padding;
+    width: 50%;
+  }
+
+  .right {
+    @include flex-component(start, start, column);
+    width: 50%;
+    a {
+      @include main-button;
+      width: 150px;
+      text-decoration: none;
+    }
+  }
+
+  .img-holder {
+    padding: $default-padding;
+    img {
+      @include img-default-holder;
+      border-radius: 11px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    @include flex-responsiveness(space-around);
+    width: 100%;
+
+    .left,
+    .right {
+      @include flex-component(center, center, column);
+      width: 100%;
+    }
+    h1,
+    p {
+      text-align: center;
+    }
+    .img-holder {
+      margin-top: 10px;
+      width: 60%;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: $breakpoint-mobile) {
+    .img-holder {
+      padding: 0;
+    }
+  }
+}
+
+.content {
+  @include flex-component(center, center, column);
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
+}
+
+.txt-display {
+  padding: 50px;
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 0;
+  }
+}
+
+.bg {
+  background-color: $gray-text-color;
+}
+
+footer {
+  background-color: $gray-text-color;
+}
+
+.footer-infos-holder {
+  @include main-holder(start, space-between);
+  padding: 100px 0px;
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    @include flex-responsiveness(center);
+    width: 100%;
+    padding-left: $default-padding;
+    padding-right: $default-padding;
+  }
+
+  .footer-content {
+    width: 40%;
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 100%;
+    }
+    h2 {
+      font-size: map-get($fonts, "lg");
+      margin-bottom: 20px;
+    }
+    h1,
+    h3 {
+      font-weight: $stronger-weight;
+      margin-bottom: 20px;
+      font-size: map-get($fonts, "m");
+    }
+
+    p {
+      font-weight: $p-weight;
+    }
+  }
+}
+
+.footer-menus {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .exact-location {
+    margin-bottom: 8px;
+  }
+  .quick-links p {
+    margin-bottom: 8px;
+  }
+
+  .exact-location {
+    @include flex-component(center, start, row);
+    margin-bottom: 8px;
+    img {
+      padding-right: 8px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+.social-media {
+  @include flex-component(start, start, row);
+  margin-top: 25px;
+  width: 100%;
+  a {
+    border: 1px solid #000000;
+    color: #000000;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    @include flex-component(center, center, row);
+    margin-right: 15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.copy-right-holder {
+  background-color: $gray-text-color;
+  border-top: 1px solid $dark-gray-color;
+}
+
+.text-copy-right {
+  @include main-holder(start, center);
+  width: 100%;
+  padding: 20px 0px;
+  p {
+    text-align: center;
+  }
+}

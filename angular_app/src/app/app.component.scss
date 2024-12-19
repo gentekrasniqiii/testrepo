@@ -1,0 +1,31 @@
+@import "../styles/base/styles.scss";
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $base-color;
+  z-index: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  max-width: 1199px;
+  margin: auto;
+  padding: 20px 25px 20px 25px;
+  ul {
+    @include flex-component(center, space-between, row);
+    width: 100%;
+  }
+  li:first-child a {
+    font-size: map-get($fonts, "s");
+    font-weight: $stronger-weight;
+  }
+  li:last-child a {
+    @include main-button;
+  }
+}
